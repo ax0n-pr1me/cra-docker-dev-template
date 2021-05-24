@@ -1,0 +1,17 @@
+version: '3.9'
+
+services:
+    r3con-ui-prod:
+        container_name: sample_prod
+        build:
+            context: .
+            dockerfile: Dockerfile.prod
+        # volumes: 
+        #     - caddy_data:/data
+        #     - caddy_config:/config
+        ports:
+            - 1337:80 #nginx
+            # - 1337:2019 #caddy?
+# volumes:
+#     caddy_data:
+#     caddy_config:
